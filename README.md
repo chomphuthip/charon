@@ -5,7 +5,7 @@ Charon is a minimal fileless malware loader that downloads payloads over TCP and
 
 A number of improvements could be made such as:
 1. Implementing the program in assembly in order to avoid the overhead that C compilers introduce.
-2. Calling syscalls directly instead of calling kernel32 functions in order to avoid hooks setup by modern EDRs.
+2. Calling syscalls directly instead of calling kernel32/winsock functions in order to avoid hooks setup by modern EDRs.
 3. A cooler name.
 
 Shellcode is created by handwritting assembly and assembling with [NASM](https://www.nasm.us/) with ```-f bin``` flags.
