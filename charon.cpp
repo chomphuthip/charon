@@ -18,12 +18,10 @@ int main() {
 
     //get addr info
     struct addrinfo* result = NULL, hints;
-
     ZeroMemory(&hints, sizeof(hints));
     hints.ai_family = AF_INET;
     hints.ai_socktype = SOCK_STREAM;
     hints.ai_protocol = IPPROTO_TCP;
-
     int addrInfoResult = getaddrinfo("127.0.0.1", "7777", &hints, &result);
     if (addrInfoResult != 0) {
         fprintf(stderr, "INVALID ADDRINFO");
