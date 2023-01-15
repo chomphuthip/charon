@@ -8,4 +8,4 @@ A number of improvements could be made such as:
 2. Calling syscalls directly instead of calling kernel32 functions in order to avoid hooks setup by modern EDRs.
 3. A cooler name.
 
-Shellcode is created by handwritting assembly and assembling with [NASM](https://www.nasm.us/) using the ```bin``` format.
+Shellcode is created by handwritting assembly and assembling with [NASM](https://www.nasm.us/) with ```-f bin``` flags.
