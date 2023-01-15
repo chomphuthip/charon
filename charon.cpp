@@ -54,8 +54,8 @@ int main() {
     freeaddrinfo(result);
 
     //recv size
-    int size = 0;
-    int sizeResult = recv(sock, (char*)&size, sizeof(int), 0);
+    size_t size = 0;
+    int sizeResult = recv(sock, (char*)&size, sizeof(size_t), 0);
     if (sizeResult <= 0) {
         fprintf(stderr, "SIZE RECV FAILURE");
         closesocket(sock);
@@ -65,7 +65,7 @@ int main() {
     printf("BINARY SIZE: %i", size);
 
     //ack size
-    int ackResult = send(sock, (char*)&size, sizeof(int), 0);
+    int ackResult = send(sock, (char*)&size, sizeof(size), 0);
     if (ackResult <= 0) {
         fprintf(stderr, "ACK SEND FAILURE");
         closesocket(sock);
